@@ -1,16 +1,45 @@
+/* Importa los estilos de Tailwind v4 */
 @import "tailwindcss";
 
-@theme {
-  --color-primary-dark: #0B192F;
-  --color-primary-light: #CCD6F6;
-  --color-accent-blue: #64FFDA;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* Define aquí tus clases personalizadas y estilos base */
 body {
-  margin: 0;
-  padding: 0;
+  @apply bg-black text-white overflow-x-hidden;
+}
+
+.gradient-text {
+  @apply font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-200 to-white;
+}
+
+.btn-primary-gradient {
+    @apply bg-gradient-to-r from-[#6a11cb] to-[#f9b5ff] text-white border-none;
+}
+
+.btn-primary-gradient:hover {
+    @apply shadow-[0_0_15px_5px_rgba(222,194,255,0.2)];
+}
+
+.header-gradient {
+    background: linear-gradient(220deg, #D437C0, #7e22ce);
+    background-size: 400% 400%;
+}
+
+/* Estilos para la barra de scroll y selección */
+::selection {
+  @apply bg-primary text-black;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-300;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
 }

@@ -1,23 +1,22 @@
-import React from 'react';
+import Navbar from './components/Navbar';
 import Header from './components/Header';
-import Hero from './components/Hero';
 import About from './components/About';
-import Education from './components/Education';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
+import Technologies from './components/Technologies';
+import Services from './components/Services';
+import RecentWork from './components/RecentWork';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-primary-dark">
+    <div className="relative">
+      <Navbar />
       <Header />
       <main>
-        <Hero />
         <About />
-        <Education />
-        <Experience />
-        <Projects />
+        <Technologies />
+        <Services />
+        <RecentWork />
         <Contact />
       </main>
       <Footer />
