@@ -1,7 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #0B192F;
+  --color-primary-light: #CCD6F6;
+  --color-accent-blue: #64FFDA;
+}
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
