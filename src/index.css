@@ -1,31 +1,57 @@
-/* Importa los estilos de Tailwind v4 */
 @import "tailwindcss";
 
-/* Define aquí tus clases personalizadas y estilos base */
+@theme {
+  --color-primary: #a855f7;
+  --color-primary-100: #d8b4fe;
+  --color-primary-200: #c084fc;
+  --color-primary-300: #a855f7;
+  --color-primary-500: #7e22ce;
+}
+
 body {
   @apply bg-black text-white overflow-x-hidden;
 }
 
 .gradient-text {
-  @apply font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-200 to-white;
+  @apply font-bold bg-clip-text text-transparent;
+  background-image: linear-gradient(to right, var(--color-primary-200), white);
 }
 
 .btn-primary-gradient {
-    @apply bg-gradient-to-r from-[#6a11cb] to-[#f9b5ff] text-white border-none;
+  background-image: linear-gradient(to right, #6a11cb, #f9b5ff);
+  @apply text-white border-none;
 }
 
 .btn-primary-gradient:hover {
-    @apply shadow-[0_0_15px_5px_rgba(222,194,255,0.2)];
+  box-shadow: 0 0 15px 5px rgba(222, 194, 255, 0.2);
 }
 
 .header-gradient {
-    background: linear-gradient(220deg, #D437C0, #7e22ce);
-    background-size: 400% 400%;
+  background: linear-gradient(220deg, #D437C0, #7e22ce);
+  background-size: 400% 400%;
 }
 
-/* Estilos para la barra de scroll y selección */
+@keyframes gradientBackground {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-gradientBackground {
+  animation: gradientBackground 9s ease infinite;
+}
+
+.animate-blink {
+  animation: blink 1.5s infinite;
+}
+
 ::selection {
-  @apply bg-primary text-black;
+  background-color: var(--color-primary);
+  color: black;
 }
 
 ::-webkit-scrollbar {
@@ -37,9 +63,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary-300;
+  background-color: var(--color-primary-300);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary;
+  background-color: var(--color-primary);
 }

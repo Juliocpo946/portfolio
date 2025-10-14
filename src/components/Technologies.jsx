@@ -16,11 +16,11 @@ const technologies = [
 const Technologies = () => {
   return (
     <section id="technologies" className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto my-12 px-8 lg:px-24">
         <div className="grid lg:grid-cols-3 gap-10">
           <div className="lg:col-span-1">
             <h4 className="text-lg">Skills</h4>
-            <h2 className="gradient-text text-4xl mt-2">What tools do I specialize in?</h2>
+            <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-200 to-white mt-2">What tools do I specialize in?</h2>
             <p className="mt-4">
               Here, I share the tools I use to make things happen. From design to development, these are the platforms that help me bring my ideas to life!
             </p>

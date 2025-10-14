@@ -31,7 +31,7 @@ const projects = [
 const RecentWork = () => {
     return (
         <section id="recent" className="py-20">
-            <div className="container mx-auto px-4 text-center">
+            <div className="container mx-auto my-12 px-8 lg:px-24 text-center">
                 <h4 className="text-lg">Recent Work</h4>
                 <h2 className="gradient-text text-4xl">View My Latest Projects</h2>
 

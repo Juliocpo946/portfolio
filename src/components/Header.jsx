@@ -8,7 +8,8 @@ const Header = () => {
       <div className="absolute inset-0 header-gradient animate-gradientBackground"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
       
-      <div className="container mx-auto h-full flex items-center relative z-10 text-white px-4">
+      {/* CAMBIO EN LA LÍNEA SIGUIENTE */}
+      <div className="container mx-auto h-full flex items-center relative z-10 text-white px-6 md:px-12">
         <div className="w-full md:w-7/12 pt-20">
           <h1 className="text-5xl md:text-6xl font-bold mt-5">Hi, my name is Abril Ramirez</h1>
           

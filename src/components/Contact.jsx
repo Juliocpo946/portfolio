@@ -32,7 +32,7 @@ const contactInfo = [
 const Contact = () => {
   return (
     <section id="contact" className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto my-12 px-8 lg:px-24">
         <div>
           <h4 className="text-lg">Contact</h4>
           <h2 className="gradient-text text-4xl">Let's Discuss Your Requeriments</h2>
