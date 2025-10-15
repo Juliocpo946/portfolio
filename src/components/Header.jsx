@@ -1,36 +1,54 @@
 import React from 'react';
 import profilePic from '../assets/images/profile-pic.png';
-import { FaFacebook, FaInstagram, FaBehance, FaDribbble, FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
+import { IoMail } from 'react-icons/io5';
 
 const Header = () => {
   return (
-    <header id="home" className="relative h-[850px] overflow-hidden">
+    <header id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 header-gradient animate-gradientBackground"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
       
-      {/* CAMBIO EN LA LÍNEA SIGUIENTE */}
-      <div className="container mx-auto h-full flex items-center relative z-10 text-white px-6 md:px-12">
-        <div className="w-full md:w-7/12 pt-20">
-          <h1 className="text-5xl md:text-6xl font-bold mt-5">Hi, my name is Abril Ramirez</h1>
+      <div className="container mx-auto h-full flex items-center justify-center relative z-10 text-white px-6 md:px-12 pt-24">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-full gap-8">
           
-          <div className="py-4 flex space-x-4">
-            <a href="https://facebook.com/uxramirez/" className="hover:text-primary-200"><FaFacebook size={32} /></a>
-            <a href="https://instagram.com/ux_ramirez/" className="hover:text-primary-200"><FaInstagram size={32} /></a>
-            <a href="https://www.behance.net/ux_ramirez" className="hover:text-primary-200"><FaBehance size={32} /></a>
-            <a href="https://dribbble.com/ux_ramirez" className="hover:text-primary-200"><FaDribbble size={32} /></a>
-            <a href="https://github.com/UX-Ramirez" className="hover:text-primary-200"><FaGithub size={32} /></a>
+          <div className="w-full lg:w-7/12 text-center lg:text-left">
+            <h1 className="text-5xl md:text-6xl font-bold">Hi, my name is Julio</h1>
+            
+            <p className="text-xl text-[var(--color-primary-200)] mt-4">Fullstack Developer</p>
+            <p className="text-lg mt-2 max-w-xl mx-auto lg:mx-0">
+              Fullstack Developer with experience in designing and developing complete web applications. Specialized in creating REST APIs, dynamic interfaces, and scalable, robust systems.
+            </p>
+
+            <div className="py-5 flex space-x-6 justify-center lg:justify-start">
+              <a href="https://github.com/Juliocpo946" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary-200)]">
+                <FaGithub size={32} />
+              </a>
+              <a href="https://www.linkedin.com/in/tu-usuario/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary-200)]">
+                <FaLinkedin size={32} />
+              </a>
+               <a href="mailto:juliocesarp6273@gmail.com" className="hover:text-[var(--color-primary-200)]">
+                <IoMail size={32} />
+              </a>
+            </div>
+            
+            <div className="mt-4 flex items-center justify-center lg:justify-start">
+              <a href="/JulioCesarPerezOrtiz_CV.pdf" download="JulioCesarPerezOrtiz_CV.pdf" className="flex items-center gap-2 border border-white text-white px-8 py-3 rounded-md">
+                <FaDownload />
+                <span>Download CV</span>
+              </a>
+            </div>
+          </div>
+          
+          <div className="w-full lg:w-auto flex justify-center lg:justify-end">
+             <img 
+               src={profilePic} 
+               className="w-64 h-64 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-[var(--color-primary-dark)] shadow-2xl" 
+               alt="Profile"
+             />
           </div>
 
-          <p className="text-xl text-primary-200">And I’m a Jr. UI/UX Designer</p>
-          <p className="text-lg mt-2">Graduated in Computer Systems Engineer, I'm starting my journey on web design and UI/UX world. Actually, I’m focused on landing page and web design.</p>
-          
-          <div className="mt-6">
-            <a href="#contact" className="btn-primary-gradient px-8 py-3 rounded-md mr-4">Contact</a>
-            <a href="#services" className="border border-white text-white px-8 py-3 rounded-md">Services</a>
-          </div>
         </div>
-        
-        <img src={profilePic} className="absolute bottom-0 right-20 w-48 rounded-full pt-3 hidden lg:block" alt="Profile"/>
       </div>
     </header>
   );
