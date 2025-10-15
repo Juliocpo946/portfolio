@@ -10,7 +10,7 @@ export const portfolioData = {
         "Construí componentes reutilizables y responsivos para mejorar la experiencia del usuario.",
         "Optimicé el rendimiento visual y aseguré compatibilidad entre navegadores y dispositivos."
       ],
-      technologies: ["Vue.js", "HTML5", "Alpine.js", "Tailwind CSS"]
+      technologies: ["HTML5", "Alpine.js", "Tailwind CSS"]
     },
     {
       role: "Desarrollador Fullstack",
