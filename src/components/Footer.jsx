@@ -14,7 +14,7 @@ const Footer = () => {
             <a href="https://github.com/Juliocpo946" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary-200)]">
               <FaGithub size={28} />
             </a>
-            <a href="https://www.linkedin.com/in/tu-usuario/" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary-200)]">
+            <a href="https://www.linkedin.com/in/julio-cesar-perez-ortiz-465bb8249" target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary-200)]">
               <FaLinkedin size={28} />
             </a>
             <a href="mailto:juliocesarp6273@gmail.com" className="hover:text-[var(--color-primary-200)]">
