@@ -24,7 +24,7 @@ export const portfolioData = {
         "Desarrollé interfaces administrativas para edición de contenido sin intervención técnica.",
         "Apliqué mejores prácticas en arquitectura y estructura de proyecto orientada a escalabilidad."
       ],
-      technologies: ["PHP", "Laravel","Tailwind CSS","MySQL"]
+      technologies: ["PHP", "Laravel", "Tailwind CSS", "MySQL"]
     }
   ],
   education: [
@@ -52,7 +52,7 @@ export const portfolioData = {
       title: "Networking Basics",
       issuer: "CISCO"
     },
-     {
+    {
       title: "Network Addressing and Basic Troubleshooting",
       issuer: "CISCO"
     }
