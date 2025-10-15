@@ -1,6 +1,5 @@
 import React from 'react';
-import profilePic from '../assets/images/profile-pic.png';
-import { FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaDownload, FaUserAstronaut } from 'react-icons/fa';
 import { IoMail } from 'react-icons/io5';
 
 const Header = () => {
@@ -10,10 +9,10 @@ const Header = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
       
       <div className="container mx-auto h-full flex items-center justify-center relative z-10 text-white px-6 md:px-12 pt-24">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-full gap-8">
-          
-          <div className="w-full lg:w-7/12 text-center lg:text-left">
-            <h1 className="text-5xl md:text-6xl font-bold">Hi, my name is Julio</h1>
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full gap-16">
+    
+          <div className="w-full lg:w-8/12 text-center lg:text-left">
+            <h1 className="text-5xl md:text-6xl font-bold">Hi, my name is Julio César</h1>
             
             <p className="text-xl text-[var(--color-primary-200)] mt-4">Fullstack Developer</p>
             <p className="text-lg mt-2 max-w-xl mx-auto lg:mx-0">
@@ -40,12 +39,11 @@ const Header = () => {
             </div>
           </div>
           
-          <div className="w-full lg:w-auto flex justify-center lg:justify-end">
-             <img 
-               src={profilePic} 
-               className="w-64 h-64 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-[var(--color-primary-dark)] shadow-2xl" 
-               alt="Profile"
-             />
+          {/* Ancho ajustado y justificación a la izquierda */}
+          <div className="w-full lg:w-4/12 flex justify-center lg:justify-start">
+             <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full border-4 border-[var(--color-primary-dark)] shadow-2xl flex items-center justify-center">
+                <FaUserAstronaut className="text-[10rem] lg:text-[12rem] text-[var(--color-accent)]" />
+             </div>
           </div>
 
         </div>

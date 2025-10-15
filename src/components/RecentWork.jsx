@@ -43,7 +43,7 @@ const RecentWork = () => {
                                 <h5 className="font-bold text-xl">{project.title}</h5>
                                 <p className="text-primary-200">{project.category}</p>
                                 <p className="mt-2">{project.description}</p>
-                                <a href={project.link} className="text-primary-100 mt-4 inline-block">View Project</a>
+                                <a href="" className="text-primary-100 mt-4 inline-block">View Project</a>
                             </div>
                         </div>
                     ))}
