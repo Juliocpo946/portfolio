@@ -1,11 +1,11 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { FaGraduationCap, FaLink, FaGoogle, FaAws } from 'react-icons/fa';
-import { SiCisco } from "react-icons/si";
+import { FaGraduationCap, FaLink, FaGoogle } from 'react-icons/fa';
+import { SiCisco, SiAmazonaws } from "react-icons/si";
 
 const certIconMap = {
     "Google": <FaGoogle />,
-    "AWS": <FaAws />,
+    "AWS": <SiAmazonaws />,
     "CISCO": <SiCisco />
 };
 
