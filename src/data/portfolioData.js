@@ -8,8 +8,7 @@ export const portfolioData = {
       tasks: [
         "Desarrollé la interfaz completa para la plataforma Sportso, transformando prototipos en vistas interactivas.",
         "Construí componentes reutilizables y responsivos para mejorar la experiencia del usuario.",
-        "Optimicé el rendimiento visual y aseguré compatibilidad entre navegadores y dispositivos.",
-        "Colaboré en la integración del diseño UI/UX con la lógica de negocio."
+        "Optimicé el rendimiento visual y aseguré compatibilidad entre navegadores y dispositivos."
       ],
       technologies: ["Vue.js", "HTML5", "Alpine.js", "Tailwind CSS"]
     },
