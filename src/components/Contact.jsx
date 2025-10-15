@@ -4,7 +4,7 @@ import { FaLinkedin } from 'react-icons/fa';
 
 const contactInfo = [
   {
-    platform: "Email",
+    platform: "Correo Electrónico",
     value: "juliocesarp6273@gmail.com",
     link: "mailto:juliocesarp6273@gmail.com",
     icon: <IoMail size={32} />
@@ -22,12 +22,12 @@ const Contact = () => {
     <section id="contact" className="py-20">
       <div className="container mx-auto my-12 px-8 lg:px-24">
         <div>
-          <h4 className="text-lg">Contact</h4>
-          <h2 className="gradient-text text-4xl">Let's Discuss Your Requeriments</h2>
+          <h4 className="text-lg">Contacto</h4>
+          <h2 className="gradient-text text-4xl">Hablemos de Tus Requerimientos</h2>
         </div>
         <div className="grid lg:grid-cols-12 gap-10 mt-10">
           <div className="lg:col-span-5">
-            <p>If you want a unique and personalized project, send me a message, or contact me at:</p>
+            <p>Si deseas un proyecto único y personalizado, envíame un mensaje, o contáctame en:</p>
             <ul className="space-y-6 mt-6">
               {contactInfo.map((item, index) => (
                 <li key={index} className="flex items-center">
@@ -43,15 +43,14 @@ const Contact = () => {
           </div>
           <div className="lg:col-span-7">
             <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
-              {/* Reemplaza "TU_ACCESS_KEY" con tu clave de Web3Forms */}
               <input type="hidden" name="access_key" value="TU_ACCESS_KEY" />
               <div className="grid md:grid-cols-2 gap-4">
-                <input type="text" placeholder="Name" name="Name" required className="w-full p-3 bg-[#2b2b2b] border border-[#414141] rounded-md"/>
-                <input type="text" placeholder="Last Name" name="Last Name" required className="w-full p-3 bg-[#2b2b2b] border border-[#414141] rounded-md"/>
+                <input type="text" placeholder="Nombre" name="Name" required className="w-full p-3 bg-[#2b2b2b] border border-[#414141] rounded-md"/>
+                <input type="text" placeholder="Apellido" name="Last Name" required className="w-full p-3 bg-[#2b2b2b] border border-[#414141] rounded-md"/>
               </div>
-              <input type="email" placeholder="example@email.com" name="Email Address" required className="w-full p-3 bg-[#2b2b2b] border border-[#414141] rounded-md"/>
-              <textarea placeholder="Write your message here..." name="Message" rows="4" required className="w-full p-3 bg-[#2b2b2b] border border-[#414141] rounded-md"></textarea>
-              <button type="submit" className="btn-primary-gradient px-8 py-3 rounded-md">Send</button>
+              <input type="email" placeholder="ejemplo@email.com" name="Email Address" required className="w-full p-3 bg-[#2b2b2b] border border-[#414141] rounded-md"/>
+              <textarea placeholder="Escribe tu mensaje aquí..." name="Message" rows="4" required className="w-full p-3 bg-[#2b2b2b] border border-[#414141] rounded-md"></textarea>
+              <button type="submit" className="btn-primary-gradient px-8 py-3 rounded-md">Enviar</button>
             </form>
           </div>
         </div>

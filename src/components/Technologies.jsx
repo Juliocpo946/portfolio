@@ -25,13 +25,12 @@ const Technologies = () => {
   return (
     <section id="technologies" className="py-20">
       <div className="container mx-auto my-12 px-8 lg:px-24">
-        {/* Añadí items-center para centrar verticalmente */}
         <div className="grid lg:grid-cols-3 gap-10 items-center">
           <div className="lg:col-span-1">
-            <h4 className="text-lg">Skills</h4>
-            <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-200 to-white mt-2">What tools do I specialize in?</h2>
+            <h4 className="text-lg">Habilidades</h4>
+            <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-200 to-white mt-2">¿En qué herramientas me especializo?</h2>
             <p className="mt-4">
-              Here, I share the tools I use to make things happen. From design to development, these are the platforms that help me bring my ideas to life!
+              Aquí comparto las herramientas que utilizo para hacer las cosas realidad. Desde el diseño hasta el desarrollo, estas son las plataformas que me ayudan a dar vida a mis ideas.
             </p>
           </div>
           <div className="lg:col-span-2">

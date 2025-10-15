@@ -20,14 +20,13 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20">
       <div className="container mx-auto px-8 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12 gradient-text">Work Experience</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 gradient-text">Experiencia Laboral</h2>
         <div className="relative border-l-2 border-[var(--color-primary-dark)] pl-10">
           {experience.map((job, index) => (
             <div key={index} className="mb-12">
               <span className="absolute -left-[21px] flex items-center justify-center w-10 h-10 bg-[var(--color-primary)] rounded-full ring-8 ring-black">
                 <MdWork className="text-white text-xl" />
               </span>
-              {/* Contenedor ahora transparente con un borde */}
               <div className="bg-transparent p-6 rounded-lg border border-gray-700 ml-4">
                   <div className="flex justify-between items-start">
                     <div>
@@ -45,7 +44,7 @@ const Experience = () => {
                   </ul>
 
                   <div className="mt-4 flex flex-wrap items-center gap-4">
-                    <h4 className="font-semibold text-gray-200">Technologies:</h4>
+                    <h4 className="font-semibold text-gray-200">Tecnologías:</h4>
                     <div className="flex flex-wrap gap-x-4 gap-y-2">
                         {job.technologies.map(tech => (
                             <div key={tech} className="flex items-center gap-2 text-gray-300">

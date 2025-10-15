@@ -1,65 +1,60 @@
 export const portfolioData = {
   experience: [
     {
-      role: "Frontend Developer",
-      company: "Weblabor (Industrial Placement)",
-      period: "Aug 2024",
+      role: "Desarrollador Frontend",
+      company: "Weblabor (Estadía Industrial)",
+      period: "Ago 2024",
       location: "Mérida, Yucatán",
       tasks: [
-        "Developed the complete interface for the Sportso platform, transforming prototypes into interactive views.",
-        "Built reusable and responsive components to improve user experience.",
-        "Optimized visual performance and ensured cross-browser and device compatibility.",
-        "Collaborated on integrating UI/UX design with business logic."
+        "Desarrollé la interfaz completa para la plataforma Sportso, transformando prototipos en vistas interactivas.",
+        "Construí componentes reutilizables y responsivos para mejorar la experiencia del usuario.",
+        "Optimicé el rendimiento visual y aseguré compatibilidad entre navegadores y dispositivos.",
+        "Colaboré en la integración del diseño UI/UX con la lógica de negocio."
       ],
       technologies: ["Vue.js", "HTML5", "Alpine.js", "Tailwind CSS"]
     },
     {
-      role: "Fullstack Developer",
-      company: "CYBAC TI (Industrial Placement)",
-      period: "Mar - Apr 2024",
+      role: "Desarrollador Fullstack",
+      company: "CYBAC TI (Estadía Industrial)",
+      period: "Mar - Abr 2024",
       location: "Tuxtla Gutiérrez, Chiapas",
       tasks: [
-        "Designed and developed a web application with an administrative panel for content management.",
-        "Built frontend and backend functionalities ensuring modularity, security, and data validation.",
-        "Developed administrative interfaces for content editing without technical intervention.",
-        "Applied best practices in architecture and project structure oriented towards scalability."
+        "Diseñé y desarrollé una aplicación web con panel administrativo para gestión de contenido.",
+        "Construí funcionalidades frontend y backend asegurando modularidad, seguridad y validación de datos.",
+        "Desarrollé interfaces administrativas para edición de contenido sin intervención técnica.",
+        "Apliqué mejores prácticas en arquitectura y estructura de proyecto orientada a escalabilidad."
       ],
-      technologies: ["PHP", "Laravel", "MySQL"]
+      technologies: ["PHP", "Laravel","Tailwind CSS","MySQL"]
     }
   ],
   education: [
     {
-      degree: "Software Engineering",
+      degree: "Ingeniería en Software",
       institution: "Universidad Politécnica de Chiapas",
-      period: "2022 - Present",
-      description: "Currently in the 9th quarter, with a focus on web development, software architecture, and modern methodologies."
+      period: "2022 - Presente",
+      description: "Actualmente en el 9º cuatrimestre, con enfoque en desarrollo web, arquitectura de software y metodologías modernas."
     }
   ],
   certifications: [
     {
       title: "Google UX Design Certificate",
-      issuer: "Google",
-      link: "#"
+      issuer: "Google"
     },
     {
       title: "AWS Academy Cloud Foundations",
-      issuer: "AWS",
-      link: "#"
+      issuer: "AWS Academy"
     },
     {
       title: "AWS Academy Cloud Architecting",
-      issuer: "AWS",
-      link: "#"
+      issuer: "AWS Academy"
     },
     {
       title: "Networking Basics",
-      issuer: "CISCO",
-      link: "#"
+      issuer: "CISCO"
     },
      {
       title: "Network Addressing and Basic Troubleshooting",
-      issuer: "CISCO",
-      link: "#"
+      issuer: "CISCO"
     }
   ]
 };

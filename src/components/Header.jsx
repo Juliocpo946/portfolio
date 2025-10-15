@@ -12,11 +12,11 @@ const Header = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full gap-16">
     
           <div className="w-full lg:w-8/12 text-center lg:text-left">
-            <h1 className="text-5xl md:text-6xl font-bold">Hi, my name is Julio César</h1>
+            <h1 className="text-5xl md:text-6xl font-bold">Hola, mi nombre es Julio César</h1>
             
-            <p className="text-xl text-[var(--color-primary-200)] mt-4">Fullstack Developer</p>
+            <p className="text-xl text-[var(--color-primary-200)] mt-4">Desarrollador Fullstack</p>
             <p className="text-lg mt-2 max-w-xl mx-auto lg:mx-0">
-              Fullstack Developer with experience in designing and developing complete web applications. Specialized in creating REST APIs, dynamic interfaces, and scalable, robust systems.
+              Desarrollador Fullstack con experiencia en diseño y desarrollo de aplicaciones web completas. Especializado en crear APIs REST, interfaces dinámicas y sistemas escalables y robustos.
             </p>
 
             <div className="py-5 flex space-x-6 justify-center lg:justify-start">
@@ -34,12 +34,11 @@ const Header = () => {
             <div className="mt-4 flex items-center justify-center lg:justify-start">
               <a href="/JulioCesarPerezOrtiz_CV.pdf" download="JulioCesarPerezOrtiz_CV.pdf" className="flex items-center gap-2 border border-white text-white px-8 py-3 rounded-md">
                 <FaDownload />
-                <span>Download CV</span>
+                <span>Descargar CV</span>
               </a>
             </div>
           </div>
           
-          {/* Ancho ajustado y justificación a la izquierda */}
           <div className="w-full lg:w-4/12 flex justify-center lg:justify-start">
              <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-full border-4 border-[var(--color-primary-dark)] shadow-2xl flex items-center justify-center">
                 <FaUserAstronaut className="text-[10rem] lg:text-[12rem] text-[var(--color-accent)]" />

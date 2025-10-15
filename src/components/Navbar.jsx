@@ -21,10 +21,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { href: '#about', text: 'About' },
-    { href: '#experience', text: 'Experience' },
-    { href: '#education', text: 'Education' },
-    { href: '#recent', text: 'Projects' },
+    { href: '#about', text: 'Sobre Mí' },
+    { href: '#experience', text: 'Experiencia' },
+    { href: '#education', text: 'Educación' },
+    { href: '#recent', text: 'Proyectos' },
   ];
 
   return (
@@ -39,7 +39,7 @@ const Navbar = () => {
             {navLinks.map(link => (
               <a key={link.href} href={link.href} className="text-white hover:text-[var(--color-primary-100)] transition-colors">{link.text}</a>
             ))}
-            <a href="#contact" className="btn-primary-gradient px-6 py-2 rounded-md">Contact</a>
+            <a href="#contact" className="btn-primary-gradient px-6 py-2 rounded-md">Contacto</a>
           </div>
 
           <button className="lg:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -56,7 +56,7 @@ const Navbar = () => {
             </a>
           ))}
           <a href="#contact" className="btn-primary-gradient px-8 py-3 rounded-md text-xl" onClick={handleLinkClick}>
-            Contact
+            Contacto
           </a>
         </div>
       </div>
