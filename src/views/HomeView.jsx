@@ -143,7 +143,9 @@ const HomeView = ({ t, setView, handleProjectClick }) => {
              </motion.div>
              <motion.div style={{ y: yCol2 }} className="flex flex-col gap-6 pt-0 md:pt-24">
                {projectsCol2.map(p => <ProjectCard key={p.id} project={p} label={t.projects.hover} onClick={handleProjectClick} />)}
-               <div className="aspect-square flex items-center justify-center">
+               
+               {/* CORRECCIÓN: "hidden md:flex" oculta este botón en móvil */}
+               <div className="aspect-square hidden md:flex items-center justify-center">
                  <MagneticButton onClick={() => setView('all')} className="w-40 h-40 rounded-full border border-neutral-400 dark:border-neutral-600 flex flex-col items-center justify-center gap-2 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-500 group">
                     <span className="text-xs font-mono uppercase text-center max-w-[100px]">{t.projects.viewAll}</span>
                     <Plus className="group-hover:rotate-90 transition-transform" />
