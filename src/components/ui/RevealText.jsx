@@ -3,7 +3,8 @@ import { motion, useInView } from 'framer-motion';
 
 const RevealText = ({ children, delay = 0, className = "" }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-10%" });
+  
+  const isInView = useInView(ref, { once: false, margin: "-10%" });
   
   return (
     <div ref={ref} className={`relative overflow-hidden ${className}`}>
