@@ -4,11 +4,11 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class', // Importante para el toggle Dark/Light
+  darkMode: 'class', // Esto habilita el cambio manual de tema con el botón
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // O la fuente que prefieras
+        sans: ['Inter', 'sans-serif'],
         mono: ['Fira Code', 'monospace'],
       },
     },

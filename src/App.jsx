@@ -10,7 +10,7 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [lang, setLang] = useState('en');
   const [view, setView] = useState('home'); 
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProjectId, setSelectedProjectId] = useState(null); // Guardamos ID, no objeto
   
   const t = content[lang];
   const containerRef = useRef(null);
@@ -26,8 +26,13 @@ export default function App() {
      window.scrollTo(0, 0);
   }, [view]);
 
+  // Derivamos el proyecto seleccionado basándonos en el idioma actual (t)
+  const selectedProject = selectedProjectId 
+    ? t.projectsList.find(p => p.id === selectedProjectId) 
+    : null;
+
   const handleProjectClick = (project) => {
-     setSelectedProject(project);
+     setSelectedProjectId(project.id);
      setView('detail');
   };
 

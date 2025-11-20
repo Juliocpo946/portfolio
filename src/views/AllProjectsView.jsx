@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import ProjectCard from '../components/ProjectCard';
-import { projectsData } from '../data/content';
 
 const AllProjectsView = ({ t, setView, handleProjectClick }) => {
   const [filter, setFilter] = useState('All');
+  const projectsData = t.projectsList; // Usamos la lista traducida
   const categories = ['All', ...new Set(projectsData.map(p => p.cat))];
   const filteredProjects = filter === 'All' ? projectsData : projectsData.filter(p => p.cat === filter);
 
