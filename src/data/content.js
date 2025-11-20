@@ -1,9 +1,9 @@
 export const content = {
   en: {
-    nav: { role: "Full Stack & Cloud Architect", back: "Back", all: "All Projects" },
+    nav: { role: "Full Stack Developer", back: "Back", all: "All Projects" },
     hero: {
-      subtitle: "Full Stack & Cloud Architect",
-      desc: "I transform ideas into robust, scalable digital ecosystems. Specialized in Python & React architectures with a focus on modern, clean code standards.",
+      subtitle: "Full Stack Developer",
+      desc: "I build functional and scalable web solutions. Specialized in Python & React ecosystems with a strong focus on clean code and modern interfaces.",
       cta: "Download Resume"
     },
     sections: {
@@ -16,9 +16,9 @@ export const content = {
     },
     about: {
       title: "The Developer Behind the Screen",
-      p1: "Hi, I'm Julio César. I am a Software Engineer passionate about building comprehensive solutions. My focus goes beyond just writing code; I strive to design efficient architectures and intuitive interfaces that solve real problems.",
-      p2: "Kickstarting my professional journey, I have solidified my skills through rigorous academic training and practical industrial residencies. I bring a fresh perspective, adaptability, and a drive for technical excellence to every project I undertake.",
-      quote: "Commitment to continuous learning and excellence in every line of code."
+      p1: "Hi, I'm Julio César. I am a Software Engineer focused on building comprehensive web solutions. My goal is to write efficient code and design intuitive interfaces that solve real-world problems.",
+      p2: "I am kickstarting my professional career with a solid academic foundation and practical industry experience. I bring adaptability, a fresh perspective, and a strong drive to contribute to development teams and deliver high-quality software.",
+      quote: "Commitment to continuous growth and excellence in every project."
     },
     projects: {
       viewAll: "View All Projects",
@@ -36,7 +36,7 @@ export const content = {
         role: "Front-End Developer",
         company: "GIINTAPE INNOVAHUE",
         date: "Nov 2025 - Present",
-        desc: "Leading frontend initiatives and integrating modern interfaces for technological innovation projects using Agile methodologies."
+        desc: "Collaborating with the development team on frontend tasks. Assisting in the implementation of modern user interfaces for technological innovation projects."
       },
       {
         role: "Front-End Developer",
@@ -48,7 +48,7 @@ export const content = {
         role: "Full Stack Developer",
         company: "CYBAC TI",
         date: "Mar - Apr 2024",
-        desc: "Architected and deployed a complete web application with a custom admin panel. Implemented strict security modules and data validation protocols."
+        desc: "Designed and developed a web application with a custom admin panel. Translated design mockups into functional code and implemented security modules."
       }
     ],
     education: [
@@ -139,10 +139,10 @@ export const content = {
     ]
   },
   es: {
-    nav: { role: "Arquitecto Cloud & Full Stack", back: "Volver", all: "Proyectos" },
+    nav: { role: "Desarrollador Full Stack", back: "Volver", all: "Proyectos" },
     hero: {
-      subtitle: "Arquitecto Cloud & Desarrollador Full Stack",
-      desc: "Transformo requerimientos complejos en ecosistemas digitales robustos y escalables. Especializado en arquitecturas Python y React con un enfoque en código limpio y moderno.",
+      subtitle: "Desarrollador Full Stack",
+      desc: "Transformo ideas en soluciones digitales funcionales. Especializado en ecosistemas Python y React con un enfoque en código limpio e interfaces modernas.",
       cta: "Descargar CV"
     },
     sections: {
@@ -155,9 +155,9 @@ export const content = {
     },
     about: {
       title: "El Desarrollador Detrás de la Pantalla",
-      p1: "Hola, soy Julio César. Soy un Ingeniero de Software apasionado por construir soluciones integrales. Mi enfoque va más allá del código; diseño arquitecturas eficientes e interfaces intuitivas que resuelven problemas reales.",
-      p2: "Iniciando mi trayectoria profesional, he consolidado mis habilidades a través de una rigurosa formación académica y residencias industriales prácticas. Estoy listo para aportar una perspectiva fresca, adaptabilidad y excelencia técnica a proyectos ambiciosos.",
-      quote: "Compromiso con el aprendizaje continuo y la excelencia en cada línea de código."
+      p1: "Hola, soy Julio César. Soy un Ingeniero de Software apasionado por construir soluciones integrales. Mi enfoque va más allá del código; busco diseñar arquitecturas eficientes e interfaces intuitivas que resuelvan problemas reales.",
+      p2: "Estoy iniciando mi trayectoria profesional con una base académica sólida y experiencia práctica en la industria. Aporto adaptabilidad, una perspectiva fresca y muchas ganas de contribuir al éxito de los proyectos de desarrollo.",
+      quote: "Compromiso con el aprendizaje continuo y la calidad en cada proyecto."
     },
     projects: {
       viewAll: "Ver Todos los Proyectos",
@@ -175,7 +175,7 @@ export const content = {
         role: "Desarrollador Front-End",
         company: "GIINTAPE INNOVAHUE",
         date: "Nov 2025 - Presente",
-        desc: "Liderando iniciativas frontend e integrando interfaces modernas para proyectos de innovación tecnológica bajo metodologías ágiles."
+        desc: "Colaboración activa en el equipo de desarrollo frontend. Apoyo en la integración y maquetación de interfaces modernas para proyectos de innovación tecnológica."
       },
       {
         role: "Desarrollador Front-End",
@@ -187,7 +187,7 @@ export const content = {
         role: "Desarrollador Full Stack",
         company: "CYBAC TI",
         date: "Mar - Abr 2024",
-        desc: "Arquitectura y despliegue de una aplicación web completa con panel administrativo. Implementación de módulos de seguridad estrictos."
+        desc: "Diseño completo de la aplicación y transformación de maquetas a código funcional. Desarrollo del panel administrativo y módulos de seguridad (sin despliegue a producción)."
       }
     ],
     education: [
