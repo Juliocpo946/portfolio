@@ -56,8 +56,8 @@ const AllProjectsView = ({ t, setView, handleProjectClick }) => {
                   exit={{ opacity: 0, scale: 0.9 }} 
                   transition={{ duration: 0.3 }}
                >
-                  {/* Envolvemos cada tarjeta en RevealSection para el efecto cascada al cargar */}
-                  <RevealSection type="blur" delay={i * 0.1}>
+                  {/* CAMBIO: Usamos 'scale' en lugar de 'blur' para una entrada más sólida y directa */}
+                  <RevealSection type="scale" delay={i * 0.1}>
                     <ProjectCard project={project} label={t.projects.hover} onClick={handleProjectClick} />
                   </RevealSection>
                </motion.div>
