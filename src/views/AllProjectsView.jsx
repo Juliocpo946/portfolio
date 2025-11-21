@@ -1,14 +1,20 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import ProjectCard from '../components/ProjectCard';
-import RevealSection from '../components/ui/RevealSection'; // Importamos el componente de animación
+import RevealSection from '../components/ui/RevealSection';
 
-const AllProjectsView = ({ t, setView, handleProjectClick }) => {
+const AllProjectsView = ({ t }) => {
   const [filter, setFilter] = useState('All');
+  const navigate = useNavigate();
   const projectsData = t.projectsList; 
   const categories = ['All', ...new Set(projectsData.map(p => p.cat))];
   const filteredProjects = filter === 'All' ? projectsData : projectsData.filter(p => p.cat === filter);
+
+  const handleProjectClick = (project) => {
+    navigate(`/project/${project.id}`);
+  };
 
   return (
     <motion.div 
@@ -17,11 +23,10 @@ const AllProjectsView = ({ t, setView, handleProjectClick }) => {
       exit={{ opacity: 0, y: 50 }} 
       className="pt-32 px-6 md:px-12 pb-20 min-h-screen"
     >
-       {/* Header y Filtros con animación */}
        <div className="flex flex-col md:flex-row justify-between items-end mb-20 border-b border-neutral-300 dark:border-neutral-800 pb-8">
           <div>
              <RevealSection type="slide-right">
-               <button onClick={() => setView('home')} className="flex items-center gap-2 text-xs uppercase tracking-widest mb-6 hover:text-blue-500 transition-colors">
+               <button onClick={() => navigate('/')} className="flex items-center gap-2 text-xs uppercase tracking-widest mb-6 hover:text-blue-500 transition-colors">
                  <ArrowLeft size={14} /> {t.nav.back}
                </button>
              </RevealSection>
@@ -44,7 +49,6 @@ const AllProjectsView = ({ t, setView, handleProjectClick }) => {
           </div>
        </div>
 
-       {/* Grid de Proyectos */}
        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode='popLayout'>
             {filteredProjects.map((project, i) => (
@@ -56,7 +60,6 @@ const AllProjectsView = ({ t, setView, handleProjectClick }) => {
                   exit={{ opacity: 0, scale: 0.9 }} 
                   transition={{ duration: 0.3 }}
                >
-                  {/* CAMBIO: Usamos 'scale' en lugar de 'blur' para una entrada más sólida y directa */}
                   <RevealSection type="scale" delay={i * 0.1}>
                     <ProjectCard project={project} label={t.projects.hover} onClick={handleProjectClick} />
                   </RevealSection>

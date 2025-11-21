@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Download, ArrowUpRight, Plus } from 'lucide-react';
 import RevealText from '../components/ui/RevealText';
@@ -7,11 +8,11 @@ import MagneticButton from '../components/ui/MagneticButton';
 import ProjectCard from '../components/ProjectCard';
 import { skills, socialLinks } from '../data/content'; 
 
-const HomeView = ({ t, setView, handleProjectClick }) => {
+const HomeView = ({ t }) => {
   const gridRef = useRef(null);
+  const navigate = useNavigate();
   const { scrollYProgress: gridScroll } = useScroll({ target: gridRef, offset: ["start end", "end start"] });
   
-  // Parallax más sutil para que no maree con las nuevas animaciones
   const yCol1 = useTransform(gridScroll, [0, 1], ["0%", "-5%"]);
   const yCol2 = useTransform(gridScroll, [0, 1], ["10%", "-10%"]);
   const yCol3 = useTransform(gridScroll, [0, 1], ["5%", "-5%"]);
@@ -20,10 +21,13 @@ const HomeView = ({ t, setView, handleProjectClick }) => {
   const projectsCol2 = [t.projectsList[2]];
   const projectsCol3 = [t.projectsList[3], t.projectsList[4]];
 
+  const handleProjectClick = (project) => {
+    navigate(`/project/${project.id}`);
+  };
+
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       
-      {/* HERO */}
       <header className="relative h-screen flex flex-col justify-center px-6 md:px-12 pt-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-[40vw] h-full opacity-10 pointer-events-none border-l border-neutral-500/50 dashed" />
         <div className="z-10 max-w-5xl">
@@ -58,7 +62,6 @@ const HomeView = ({ t, setView, handleProjectClick }) => {
 
       <main className="space-y-40 pb-32">
         
-        {/* ABOUT ME: Animación lateral encontrada (Título izq, texto der) */}
         <section className="px-6 md:px-12">
            <RevealSection type="slide-right" className="flex items-center gap-4 mb-16 opacity-50">
              <span className="font-mono text-xs">00</span>
@@ -90,7 +93,6 @@ const HomeView = ({ t, setView, handleProjectClick }) => {
            </div>
         </section>
 
-        {/* EXPERIENCE: Lista en cascada (Staggered Fade Up) */}
         <section className="px-6 md:px-12">
           <RevealSection type="slide-right">
             <div className="flex items-center gap-4 mb-16 opacity-50">
@@ -123,7 +125,6 @@ const HomeView = ({ t, setView, handleProjectClick }) => {
           </div>
         </section>
 
-        {/* EDUCATION: Tarjetas que crecen (Scale Up) */}
         <section className="px-6 md:px-12">
            <RevealSection type="slide-right">
              <div className="flex items-center gap-4 mb-16 opacity-50">
@@ -149,7 +150,6 @@ const HomeView = ({ t, setView, handleProjectClick }) => {
            </div>
         </section>
 
-        {/* PROJECTS: Parallax + Aparición suave (Blur reveal) */}
         <section ref={gridRef} className="px-6 md:px-12 min-h-screen overflow-hidden">
           <RevealSection type="slide-right">
             <div className="flex justify-between items-end mb-24">
@@ -180,7 +180,7 @@ const HomeView = ({ t, setView, handleProjectClick }) => {
                
                <div className="aspect-square hidden md:flex items-center justify-center">
                  <RevealSection delay={0.4} type="scale">
-                   <MagneticButton onClick={() => setView('all')} className="w-40 h-40 rounded-full border border-neutral-400 dark:border-neutral-600 flex flex-col items-center justify-center gap-2 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-500 group">
+                   <MagneticButton onClick={() => navigate('/all-projects')} className="w-40 h-40 rounded-full border border-neutral-400 dark:border-neutral-600 flex flex-col items-center justify-center gap-2 hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-500 group">
                       <span className="text-xs font-mono uppercase text-center max-w-[100px]">{t.projects.viewAll}</span>
                       <Plus className="group-hover:rotate-90 transition-transform" />
                    </MagneticButton>
@@ -199,14 +199,13 @@ const HomeView = ({ t, setView, handleProjectClick }) => {
           
           <div className="md:hidden mt-12 flex justify-center">
             <RevealSection type="default">
-              <button onClick={() => setView('all')} className="border border-current px-8 py-4 text-xs uppercase tracking-widest flex items-center gap-2">
+              <button onClick={() => navigate('/all-projects')} className="border border-current px-8 py-4 text-xs uppercase tracking-widest flex items-center gap-2">
                  {t.projects.viewAll} <ArrowUpRight size={16} />
               </button>
             </RevealSection>
           </div>
         </section>
 
-        {/* SKILLS & CERTS: Contenedor con animación de escala y contenidos en cascada */}
         <section className="px-6 md:px-12">
           <RevealSection type="scale" delay={0.1}>
             <div className="bg-neutral-200 dark:bg-neutral-900 p-8 md:p-16 relative overflow-hidden">

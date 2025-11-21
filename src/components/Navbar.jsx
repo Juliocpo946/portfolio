@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Moon, Sun, Globe } from 'lucide-react';
 
-const Navbar = ({ t, setView, lang, setLang, darkMode, setDarkMode }) => {
+const Navbar = ({ t, lang, setLang, darkMode, setDarkMode }) => {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
-      // Cambia el estado si bajamos más de 50px
       setScrolled(window.scrollY > 50);
     };
 
@@ -18,12 +19,12 @@ const Navbar = ({ t, setView, lang, setLang, darkMode, setDarkMode }) => {
     <nav 
       className={`fixed top-0 w-full z-50 px-6 md:px-12 py-6 flex justify-between items-center transition-all duration-500 
         ${scrolled 
-          ? 'bg-black/30 dark:bg-black/50 backdrop-blur-md border-b border-white/5 py-4' // Estilo al hacer scroll (compacto y con fondo)
-          : 'bg-transparent border-transparent py-6' // Estilo inicial (transparente y más alto)
+          ? 'bg-black/30 dark:bg-black/50 backdrop-blur-md border-b border-white/5 py-4' 
+          : 'bg-transparent border-transparent py-6'
         }`}
     >
       
-      <div onClick={() => setView('home')} className="flex flex-col cursor-pointer group">
+      <div onClick={() => navigate('/')} className="flex flex-col cursor-pointer group">
         <span className="font-mono text-xs font-bold tracking-widest uppercase text-white group-hover:text-blue-400 transition-colors">
           Julio César
         </span>
